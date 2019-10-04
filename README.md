@@ -1,5 +1,5 @@
 # Barry's Project Overview
-![https://imgur.com/nYhiknS](https://imgur.com/nYhiknS)
+![Header](https://res.cloudinary.com/radiscipio/image/upload/v1570203031/zouvfc6ojtki3nsrvmlh.jpg)
 __________________________
   
 ## Description
@@ -27,7 +27,8 @@ I have two API's seeding into the project. One is user made, by registering them
 #### Post MVP
 - Add in more components to mirror Harrys.com, and give the feel of an actual business
 - Saving user shipping info
-- 
+- Add filters to the products
+- Add in more variety of products
  
 
 ## React Component Hierarchy & ERD

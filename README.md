@@ -37,22 +37,13 @@ I have two API's seeding into the project. One is user made, by registering them
 [ERD](https://imgur.com/AsjCrlm)
 
 
-
-  
-
 ## Est. Time
 
   
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 
-## Est. Time
-
-  
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-
-| :--- | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: |
 
 | Main | High | 5 Hours | 0 | 0 |
 | Products | High | 3 Hours | 0 | 0 |
@@ -62,7 +53,7 @@ I have two API's seeding into the project. One is user made, by registering them
 | Logout | High | 2 Hours | 0 | 0 |
 | Help | Medium | 2 Hours | 0 | 0 |
 | Footer | Medium | 3 Hours | 0 | 0 |
-| Styling | High | 14 Hours |
+| Styling | High | 14 Hours | 0 | 0 |
 
 | Total: | ---- | 39 Hours | 0 | 0 |
 

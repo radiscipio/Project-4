@@ -14,18 +14,17 @@ Barry's is a men's grooming website based on Harrys.com. We sell quality razors,
 ## API Info
 I have two API's seeding into the project. One is user made, by registering themselves on the website, and the other are the products displayed on the site.
 
-
 ## MVP/ Post MVP
 
 #### MVP
 - All main components (Main (Home), Products, Profile, Cart, Help, Header, and Footer)
--  Working flow of a functional website (minus actually paying for products.
+- Working flow of a functional website (without payment)
 - Working shopping cart for users to edit their items, but not delete from the database
-- Full CRUD to create, read, update, and delete a signed up user, and their information. 
+- Full CRUD to create, read, update, and delete a signed up user, and their information
 
 
 #### Post MVP
-- Add in more components to mirror Harrys.com, and give the feel of an actual business
+- Add in more features (Build a shave kit and save orders), and give the feel of an actual business
 - Saving user shipping info
 - Add filters to the products
 - Add in more variety of products
@@ -34,6 +33,7 @@ I have two API's seeding into the project. One is user made, by registering them
 ## React Component Hierarchy & ERD
 
 [Hierarchy](https://imgur.com/dlBnVki)
+<br>
 [ERD](https://imgur.com/AsjCrlm)
 
 

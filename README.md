@@ -1,6 +1,5 @@
-# Barry's Project Overview
-![Header](https://res.cloudinary.com/radiscipio/image/upload/v1570203031/zouvfc6ojtki3nsrvmlh.jpg)
-__________________________
+# Barry's
+![Header](https://res.cloudinary.com/radiscipio/image/upload/v1570205608/dfgksrjyp3lxif0gvewt.jpg)
   
 ## Description
 

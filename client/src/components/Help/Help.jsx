@@ -6,13 +6,13 @@ function Help() {
     <div>
       <div className='help-container'>
         <div>
-          <div className='problem'>Run into a problem?</div>
-          <a href="https://www.linkedin.com/in/radiscipio/"><div>Contact us here!</div></a>
+          <div className='problem'>Need some help?</div>
+          <div className='contact'><a href="https://www.linkedin.com/in/radiscipio/">Contact us here!</a></div>
         </div>
         <div className="dog-container">
           <div className="apology">Sorry you had some trouble. Here's a photo of two really awesome dogs to make you feel better!</div>
           <div>
-            <img className="dog-pic" src={("https://res.cloudinary.com/radiscipio/image/upload/v1570484903/evxm2017blfmc05fepel.jpg")} />
+            <img className="dog-pic" src={("https://res.cloudinary.com/radiscipio/image/upload/v1570484903/evxm2017blfmc05fepel.jpg")} alt="img"/>
           </div>
         </div>
       </div>

@@ -11,6 +11,11 @@
   padding: 25px;
 }
 
+.contact {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
 .dog-container {
   display: flex;
   flex-direction: column;

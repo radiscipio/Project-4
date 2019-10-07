@@ -47,6 +47,7 @@ I have two API's seeding into the project. One is user made, by registering them
 | Login | High | 3 Hours | 0 | 0 |
 | Logout | High | 2 Hours | 0 | 0 |
 | Help | Medium | 2 Hours | 0 | 0 |
+| Cart | Low | 6 Hours | 0 | 0 |
 | Footer | Medium | 3 Hours | 0 | 0 |
 | Styling | High | 14 Hours | 0 | 0 |
 | Total: | ---- | 39 Hours | 0 | 0 |

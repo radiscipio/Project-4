@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
 
 h1 {
   font-size: 40px;
@@ -8,7 +8,7 @@ h1 {
 }
 
 i {
-  padding-right: 80px;
+  padding: 20px;
 }
 
 i:hover {
@@ -21,20 +21,33 @@ i:hover {
   justify-content: space-between;
   font-family: 'Poppins', sans-serif;
   border-bottom: 1px solid rgb(11, 11, 129);
+  position: fixed;
+  width: 100%;
+  background-color: white;
 }
 
-.links {
+.logo-link {
   text-decoration: none;
-  padding-right: 80px;
-  color: rgb(113, 113, 119); 
   text-transform: uppercase;
-  letter-spacing: 1.2px;
 }
 
 .links-container {
   display: flex;
 }
 
-.right-links {
+.links {
+  text-decoration: none;
+  color: rgb(113, 113, 119); 
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 15px; 
+}
+
+.links:hover {
+  background-color: rgb(233, 231, 231);
+}
+
+
+.nav-bar {
   display: flex;
 }

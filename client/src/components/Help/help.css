@@ -1,0 +1,31 @@
+.help-container {
+  padding: 100px 0px;
+  display: flex;
+  justify-content: flex-start
+}
+
+.problem {
+  font-size: 40px;
+  width: 800px;
+  flex: 2;
+  padding: 25px;
+}
+
+.dog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.apology {
+  font-size: 22px;
+  width: 400px;
+  padding-bottom: 15px;
+}
+
+.dog-pic {
+  height: 70%;
+  width: 70%;
+}
+

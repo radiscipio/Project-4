@@ -1,3 +1,13 @@
-footer-main {
-  margin: 40px;
+.footer-main {
+  background-color: rgb(233, 231, 231);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  border-top: 1px solid rgb(11, 11, 129);
+}
+
+.fab {
+  color: black;
+  padding: 10px;
 }

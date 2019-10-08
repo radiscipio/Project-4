@@ -9,7 +9,22 @@ import Home from './components/Home/Home';
 import Products from './components/Products/Products';
 import Profile from './components/Profile/Profile';
 
+import { getProducts } from './services/api-helper';
 class App extends React.Component {
+
+  state = {
+    products: []
+  }
+
+  getAllProducts = async () => {
+    const allProducts = await getProducts(this.state.products);
+    this.setState({ products: allProducts })
+  }
+
+  componentDidMount = () => {
+    this.getAllProducts();
+  }
+  
   render() {
     return (
       <div className="App">
@@ -25,7 +40,9 @@ class App extends React.Component {
           <Route path='/Products' render={(props) => (
             <>
               <Header />
-              <Products />
+              <Products 
+                products={this.state.products}
+              />
               <Footer />
             </>
           )} />

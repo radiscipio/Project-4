@@ -28,7 +28,7 @@ Product.create!([
     photo_url: 'https://res.cloudinary.com/radiscipio/image/upload/v1570557816/f6i4nbqqmbwhpvi533eh.jpg'
   },
   {
-    name: 'Mach 50 Pure Blade', 
+    name: 'Mach 50 ', 
     product_type: 'razor', 
     price: 12, 
     description: "We only make 50 of these a month. Not because of the difficulty, but because they're made over an active volcano.", 
@@ -38,7 +38,7 @@ Product.create!([
     name: 'Extra Razor Blades (5)', 
     product_type: 'razor', 
     price: 12, 
-    description: "'If I needed to shave, I would only use these blades' - Our founders Sphinx cat, probably.", 
+    description: "''If I needed to shave, I would only use these blades'' - Our founders Sphinx cat, probably.", 
     photo_url: 'https://res.cloudinary.com/radiscipio/image/upload/c_scale,h_600,w_600/v1570562518/hcpe2hd0dqgki9oykdtc.jpg'
   },
   {
@@ -52,7 +52,7 @@ Product.create!([
     name: "X", 
     product_type: 'after_shave', 
     price: 7, 
-    description: "Feeling a bit naughty? Hints of leather, tobacco, and sandlewood has everyone wanting this aftershave. Don't go to heavy though, need to have them coming back for more.", 
+    description: "Feeling a bit naughty? Hints of leather, tobacco, and sandalwood has everyone wanting this aftershave. Don't go too heavy though, need to have them coming back for more.", 
     photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1570557048/jdh0cqs6aw47ipz3salt.jpg"
   },
   {
@@ -65,7 +65,7 @@ Product.create!([
     name: "The Original", 
     product_type: 'after_shave', 
     price: 7, 
-    description: "We mix evergreen, silver fir, and sandalwood to get the perfect blend of lingering scent, all in one bottle. Dapper, destinguished, and dangerous.", 
+    description: "We mix evergreen, silver fir, and sandalwood to get the perfect blend of lingering scent, all in one bottle. Dapper, distinguished, and dangerous.", 
     photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1570557048/jdh0cqs6aw47ipz3salt.jpg"
   },
   {

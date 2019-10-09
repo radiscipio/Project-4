@@ -9,13 +9,67 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Products from './components/Products/Products';
 import Profile from './components/Profile/Profile';
-
-import { getProducts } from './services/api-helper';
+import {
+  getProducts,
+  loginUser,
+  registerUser,
+  verifyUser
+} from './services/api-helper';
 class App extends React.Component {
 
   state = {
-    products: []
+    products: [],
+    currentUser: null,
+    form: {
+      email: ""
+    },
+    authFormLogin: {
+      email: "",
+      password: "",
+    },
+    authFormRegister: {
+      email: "",
+      password: "",
+      passwordConfirmation: "",
+    }
   }
+
+  /////////////////////////
+  //////// Auth //////////
+  ///////////////////////
+
+  checkUser = async () => {
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({ currentUser });
+    }
+  };
+
+  handleLogin = async () => {
+    const userData = await loginUser(this.state.authFormLogin);
+    this.setState({
+      currentUser: userData.user
+    })
+    localStorage.setItem("jwt", userData.token)
+    this.props.history.push('/home')
+  };
+
+  handleRegister = async (e) => {
+    e.preventDefault();
+    if (!this.confirmPassword()) return;
+    if (this.state.authFormRegister.email !== "" && this.state.authFormRegister.password !== "") {
+      await registerUser(this.state.authFormRegister);
+      this.handleLogin();
+    }
+  };
+
+  confirmPassword = () => {
+    return this.state.authFormRegister.password === this.state.authFormRegister.passwordConfirmation
+  }
+
+  /////////////////////////
+  ////// Products ////////
+  ///////////////////////
 
   getAllProducts = async () => {
     const allProducts = await getProducts(this.state.products);
@@ -24,54 +78,47 @@ class App extends React.Component {
 
   componentDidMount = () => {
     this.getAllProducts();
+    this.checkUser();
   }
 
   render() {
     return (
       <div className="App">
+        <Header />
         <Switch>
           <Route exact path='/' render={(props) => (
             <>
-              <Header />
               <Home />
-              <Footer />
             </>
           )} />
 
           <Route path='/Products' render={(props) => (
             <>
-              <Header />
               <Products
                 products={this.state.products}
               />
-              <Footer />
             </>
           )} />
 
           <Route path='/Help' render={(props) => (
             <>
-              <Header />
               <Help />
-              <Footer />
             </>
           )} />
 
           <Route path='/Profile' render={(props) => (
             <>
-              <Header />
               <Profile />
-              <Footer />
             </>
           )} />
 
           <Route path='/Login' render={(props) => (
             <>
-              <Header />
               <Login />
-              <Footer />
             </>
           )} />
         </Switch>
+        <Footer />
       </div>
     )
   }

@@ -9,7 +9,10 @@ class Login extends React.Component {
         <div className='form'>
           <div className='auth-heading'>Welcome back!</div>
           <div>
-            <form className='input-form'>
+            <form 
+              className='input-form'
+              onSubmit={this.props.handleLogin}
+              >
               <input
                 className='input-box'
                 type='text'
@@ -24,8 +27,8 @@ class Login extends React.Component {
                 placeholder='Password'
                 onChange={(e) => this.props.handleChange(e, 'authFormLogin')}
               />
+              <button type='submit' className='form-submit'>Submit</button>
             </form>
-            <button className='form-submit'>Submit</button>
           </div>
         </div>
         <div className='form'>
@@ -57,7 +60,7 @@ class Login extends React.Component {
                 placeholder='Confirm Password'
                 onChange={(e) => this.props.handleChange(e, 'authFormRegister')}
               />
-              <button  type='submit' className='form-submit'>Submit</button>
+              <button type='submit' className='form-submit'>Submit</button>
             </form>
           </div>
         </div>

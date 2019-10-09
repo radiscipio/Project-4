@@ -15,6 +15,7 @@ import {
   registerUser,
   verifyUser
 } from './services/api-helper';
+
 class App extends React.Component {
 
   state = {
@@ -32,7 +33,7 @@ class App extends React.Component {
       password: "",
       passwordConfirmation: "",
     }
-  }
+  };
 
   /////////////////////////
   //////// Auth //////////
@@ -45,13 +46,13 @@ class App extends React.Component {
     }
   };
 
-  handleLogin = async () => {
+  handleLogin = async (e) => { 
+    e.preventDefault();
     const userData = await loginUser(this.state.authFormLogin);
     this.setState({
       currentUser: userData.user
     })
     localStorage.setItem("jwt", userData.token)
-    this.props.history.push('/home')
   };
 
   handleRegister = async (e) => {
@@ -60,12 +61,13 @@ class App extends React.Component {
     if (this.state.authFormRegister.email !== "" && this.state.authFormRegister.password !== "") {
       const { passwordConfirmation, ...data } = this.state.authFormRegister;
       const currentUser = await registerUser(data);
+        this.setState({ currentUser})
     }
   };
 
   confirmPassword = () => {
     return this.state.authFormRegister.password === this.state.authFormRegister.passwordConfirmation
-  }
+  };
 
   /////////////////////////
   ////// Products ////////
@@ -74,12 +76,12 @@ class App extends React.Component {
   getAllProducts = async () => {
     const allProducts = await getProducts(this.state.products);
     this.setState({ products: allProducts })
-  }
+  };
 
   componentDidMount = () => {
     this.getAllProducts();
     this.checkUser();
-  }
+  };
 
   handleChange = (e, form) => {
     const { name, value } = e.target;
@@ -127,6 +129,7 @@ class App extends React.Component {
             <>
               <Login
                 handleChange={this.handleChange}
+                handleLogin={this.handleLogin}
                 handleRegister={this.handleRegister}
               />
             </>

@@ -17,6 +17,7 @@ class Header extends React.Component {
           <div className='nav-bar'><Link className='links' to="/Products">Products</Link></div>
           <div className='nav-bar'><Link className='links' to="/Help">Help</Link></div>
           <div className='nav-bar'><Link className='links' to="/Profile">Profile</Link></div>
+          <div className='nav-bar'><Link className='links' to="/Login">Login</Link></div>
           <i className="fas fa-shopping-cart fa-lg"></i>
         </div>
       </div>

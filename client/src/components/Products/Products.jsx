@@ -6,15 +6,21 @@ class Products extends React.Component {
     super(props)
   }
   render() {
-    console.log("this is props: products", this.props)
     return (
       <div>
-        <div className='products-container'>
-          <div>{this.props.products && this.props.products.map(el => {
+        <div className='product-banner'></div>
+        <h2 className='grooming'>Grooming</h2>
+        <div>
+          <div className='products-container'>{this.props.products && this.props.products.map(el => {
             return (
-              <div>
+              <div className='product-card'>
                 <div>
                   <img src={el.photo_url} alt="" />
+                </div>
+                <div className='name-and-price'>{el.name} - ${el.price}</div>
+                <div className='description'>{el.description}</div>
+                <div>
+                    <button className='cart-button'>Add to Cart</button>
                 </div>
               </div>
             )

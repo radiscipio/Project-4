@@ -6,7 +6,7 @@ function Help() {
     <div>
       <div className='help-container'>
         <div>
-          <div className='problem'>Need some help?</div>
+          <div className='problem'>Looks like you've got a problem. Let us know what we can do to help!</div>
           <div className='contact'><a href="https://www.linkedin.com/in/radiscipio/">Contact us here!</a></div>
         </div>
         <div className="dog-container">

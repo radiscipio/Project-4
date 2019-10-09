@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Help from './components/Help/Help';
 import Home from './components/Home/Home';
+import Login from './components/Login/Login';
 import Products from './components/Products/Products';
 import Profile from './components/Profile/Profile';
 
@@ -24,7 +25,7 @@ class App extends React.Component {
   componentDidMount = () => {
     this.getAllProducts();
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -40,7 +41,7 @@ class App extends React.Component {
           <Route path='/Products' render={(props) => (
             <>
               <Header />
-              <Products 
+              <Products
                 products={this.state.products}
               />
               <Footer />
@@ -59,6 +60,14 @@ class App extends React.Component {
             <>
               <Header />
               <Profile />
+              <Footer />
+            </>
+          )} />
+
+          <Route path='/Login' render={(props) => (
+            <>
+              <Header />
+              <Login />
               <Footer />
             </>
           )} />

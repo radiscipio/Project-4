@@ -1,0 +1,23 @@
+.auth-container {
+  padding: 180px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 180px;
+}
+
+.auth-heading {
+  font-size: 25px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  height: 20px;
+  width: 300px;
+  margin: 3px;
+  padding: 5px;
+  border-radius: 10px;
+}

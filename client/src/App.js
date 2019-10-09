@@ -58,8 +58,8 @@ class App extends React.Component {
     e.preventDefault();
     if (!this.confirmPassword()) return;
     if (this.state.authFormRegister.email !== "" && this.state.authFormRegister.password !== "") {
-      await registerUser(this.state.authFormRegister);
-      this.handleLogin();
+      const { passwordConfirmation, ...data } = this.state.authFormRegister;
+      const currentUser = await registerUser(data);
     }
   };
 
@@ -80,6 +80,17 @@ class App extends React.Component {
     this.getAllProducts();
     this.checkUser();
   }
+
+  handleChange = (e, form) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      ...prevState,
+      [form]: {
+        ...prevState[form],
+        [name]: value
+      }
+    }))
+  };
 
   render() {
     return (
@@ -114,7 +125,10 @@ class App extends React.Component {
 
           <Route path='/Login' render={(props) => (
             <>
-              <Login />
+              <Login
+                handleChange={this.handleChange}
+                handleRegister={this.handleRegister}
+              />
             </>
           )} />
         </Switch>

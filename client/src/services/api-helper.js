@@ -32,6 +32,11 @@ export const verifyUser = async () => {
   return false
 }
 
+export const updateUser = async (id, updateData) => {
+  const resp = await api.put(`/users/${id}`, updateData);
+  return resp.data
+}
+
 export const destroyUser = async (id) => {
   try {
     const resp = await api.delete(`/users/${id}`)

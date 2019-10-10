@@ -15,6 +15,7 @@ import {
   loginUser,
   registerUser,
   verifyUser,
+  updateUser,
   destroyUser
 } from './services/api-helper';
 
@@ -29,11 +30,16 @@ class App extends React.Component {
     authFormLogin: {
       email: "",
       password: "",
+
     },
     authFormRegister: {
       email: "",
       password: "",
       password_confirmation: "",
+    },
+    updateInfo: {
+      first_name: "",
+      last_name: ""
     }
   };
 
@@ -73,8 +79,14 @@ class App extends React.Component {
     this.props.history.push('/Login')
   };
 
+  updateUserInfo = async (e) => {
+    e.preventDefault
+    await updateUser(this.state.currentUser.id, this.state.updateInfo);
+    this.setState({ updateInfo })
+  };
+
   destroyUser = async (id) => {
-    debugger 
+    debugger
     await destroyUser(this.state.currentUser.id);
     this.setState(prevState => ({
       ...prevState
@@ -132,9 +144,12 @@ class App extends React.Component {
 
           <Route path='/Profile' render={(props) => (
             <Profile
+              handleChange={this.handleChange}
               returningUser={this.props.authFormLogin}
               newUser={this.props.authFormRegister}
               destroyUser={this.destroyUser}
+              updateInfo={this.state.updateInfo}
+              updateUserInfo={this.updateUserInfo}
             />
           )} />
 

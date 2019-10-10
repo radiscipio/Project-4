@@ -30,7 +30,6 @@ class App extends React.Component {
     authFormLogin: {
       email: "",
       password: "",
-
     },
     authFormRegister: {
       email: "",
@@ -80,18 +79,19 @@ class App extends React.Component {
   };
 
   updateUserInfo = async (e) => {
-    e.preventDefault
+    e.preventDefault();
     await updateUser(this.state.currentUser.id, this.state.updateInfo);
-    this.setState({ updateInfo })
+    this.setState({ updateInfo : updateUser })
   };
 
-  destroyUser = async (id) => {
-    debugger
+  destroyUser = async (e) => {
+    e.preventDefault();
     await destroyUser(this.state.currentUser.id);
     this.setState(prevState => ({
       ...prevState
     }))
-    this.props.history.push('/Home')
+    this.props.history.push('/Login')
+    this.handleLogout(e);
   };
 
   /////////////////////////
@@ -144,6 +144,7 @@ class App extends React.Component {
 
           <Route path='/Profile' render={(props) => (
             <Profile
+              currentUser={this.state.currentUser}
               handleChange={this.handleChange}
               returningUser={this.props.authFormLogin}
               newUser={this.props.authFormRegister}

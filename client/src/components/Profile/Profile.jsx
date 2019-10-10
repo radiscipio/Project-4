@@ -6,13 +6,19 @@ function Profile(props) {
   console.log('this is props', props)
   return (
     <div>
+      <h2 className='details'>Your Details</h2>
       <div className='profile-container'>
-        <div>
-          <div>{props.currentUser && props.currentUser.email}</div> 
-        </div>
         <div className='name-container'>
-          <form onSubmit={props.updateUserInfo}>
+          <div>Email: {props.currentUser && props.currentUser.email}</div>
+          <div>First Name: {props.currentUser && props.currentUser.first_name}</div>
+          <div>Last Name: {props.currentUser && props.currentUser.last_name}</div>
+        </div>
+        <div className='name-submit'>
+          <form
+            className='name-form'
+            onSubmit={props.updateUserInfo}>
             <input
+              className='input-box'
               type='text'
               name='first_name'
               placeholder='First Name'
@@ -20,13 +26,14 @@ function Profile(props) {
               onChange={(e) => props.handleChange(e, 'updateInfo')}
             />
             <input
+              className='input-box'
               type='text'
               name='last_name'
               placeholder='Last Name'
               onChange={(e) => props.handleChange(e, 'updateInfo')}
               value={props.updateInfo.last_name}
             />
-            <button>Submit</button>
+            <button className='submit-name'>Submit</button>
           </form>
         </div>
       </div>

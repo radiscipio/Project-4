@@ -1,9 +1,50 @@
+.details {
+  text-align: left;
+  font-size: 25px;
+  padding: 100px 0px 20px 45px;
+}
+
 .profile-container {
-  padding: 150px;
   height: 200px;
+  padding: 50px 50px 220px 125px;
+  width: 40%;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 45%;
+  margin: 0;
+}
+
+.name-submit {
+  display: flex;
+}
+
+.name-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-name {
+  font-size: 14px;
+  height: 25px;
+  background-color: rgb(11, 11, 129);
+  border: 1px solid rgb(11, 11, 129);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .delete {
   cursor: pointer;
-  margin: 30px;
+  text-decoration: underline;
 }
+
+.delete:hover {
+  color: red;
+  display: block;
+}
+

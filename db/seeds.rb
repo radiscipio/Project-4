@@ -17,7 +17,7 @@ Product.create!([
     name: 'Excalibur', 
     product_type: 'razor', 
     price: 11, 
-    description: "A blade fit for a king. One of a kind, and made just for you. Good for all skin types.", 
+    description: "A blade fit for a king. One of a kind, and made just for you. Lady of the lake not included. Good for all skin types.", 
     photo_url: 'https://res.cloudinary.com/radiscipio/image/upload/v1570557236/ycvff3yqj5sgmvutuwxd.jpg'
   },
   {

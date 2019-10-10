@@ -32,11 +32,16 @@ export const verifyUser = async () => {
   return false
 }
 
-// export const deleteUser = async () => {
-//   try {
-//     const user = await api.delete(`/user/${userId}`, null, { headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` } });
-//     return user.data;
-//   } catch (e) {
-//     console.log(e.message);
-//   };
-// }
+export const destroyUser = async (id) => {
+  try {
+    const resp = await api.delete(`/users/${id}`)
+    return resp.data
+  } catch (e) {
+    return e.message;
+  }
+}
+
+// userController.delete('/login/:id', restrict, async (req, res) => {
+//   const user = await User.findByPk(req.params.id);
+//   await user.destroy();
+// });

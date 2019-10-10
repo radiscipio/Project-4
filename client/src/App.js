@@ -14,7 +14,8 @@ import {
   getProducts,
   loginUser,
   registerUser,
-  verifyUser
+  verifyUser,
+  destroyUser
 } from './services/api-helper';
 
 class App extends React.Component {
@@ -53,7 +54,7 @@ class App extends React.Component {
     this.setState({ currentUser })
     this.props.history.push('/');
   };
-  
+
   handleRegister = async (e) => {
     e.preventDefault();
     const data = this.state.authFormRegister;
@@ -70,6 +71,15 @@ class App extends React.Component {
       currentUser: null
     })
     this.props.history.push('/Login')
+  };
+
+  destroyUser = async (id) => {
+    debugger 
+    await destroyUser(this.state.currentUser.id);
+    this.setState(prevState => ({
+      ...prevState
+    }))
+    this.props.history.push('/Home')
   };
 
   /////////////////////////
@@ -107,42 +117,33 @@ class App extends React.Component {
         />
         <Switch>
           <Route exact path='/' render={(props) => (
-            <>
-              <Home />
-            </>
+            <Home />
           )} />
 
           <Route path='/Products' render={(props) => (
-            <>
-              <Products
-                products={this.state.products}
-              />
-            </>
+            <Products
+              products={this.state.products}
+            />
           )} />
 
           <Route path='/Help' render={(props) => (
-            <>
-              <Help />
-            </>
+            <Help />
           )} />
 
           <Route path='/Profile' render={(props) => (
-            <>
-              <Profile
-                returningUser={this.props.authFormLogin}
-                newUser={this.props.authFormRegister}
-              />
-            </>
+            <Profile
+              returningUser={this.props.authFormLogin}
+              newUser={this.props.authFormRegister}
+              destroyUser={this.destroyUser}
+            />
           )} />
 
           <Route path='/Login' render={(props) => (
-            <>
-              <Login
-                handleChange={this.handleChange}
-                handleLogin={this.handleLogin}
-                handleRegister={this.handleRegister}
-              />
-            </>
+            <Login
+              handleChange={this.handleChange}
+              handleLogin={this.handleLogin}
+              handleRegister={this.handleRegister}
+            />
           )} />
         </Switch>
         <Footer />

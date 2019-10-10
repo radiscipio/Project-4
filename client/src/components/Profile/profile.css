@@ -1,3 +1,9 @@
 .profile-container {
-  padding: 80px;
+  padding: 150px;
+  height: 200px;
+}
+
+.delete {
+  cursor: pointer;
+  margin: 30px;
 }

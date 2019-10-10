@@ -10,6 +10,10 @@ i {
   padding: 20px;
 }
 
+a {
+  cursor: pointer;
+}
+
 i:hover {
   cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Products from './components/Products/Products';
 import Profile from './components/Profile/Profile';
+
 import {
   getProducts,
   loginUser,
@@ -31,7 +32,7 @@ class App extends React.Component {
     authFormRegister: {
       email: "",
       password: "",
-      passwordConfirmation: "",
+      password_confirmation: "",
     }
   };
 
@@ -46,27 +47,29 @@ class App extends React.Component {
     }
   };
 
-  handleLogin = async (e) => { 
+  handleLogin = async (e) => {
     e.preventDefault();
-    const userData = await loginUser(this.state.authFormLogin);
-    this.setState({
-      currentUser: userData.user
-    })
-    localStorage.setItem("jwt", userData.token)
+    const currentUser = await loginUser(this.state.authFormLogin);
+    this.setState({ currentUser })
+    this.props.history.push('/');
   };
-
+  
   handleRegister = async (e) => {
     e.preventDefault();
-    if (!this.confirmPassword()) return;
-    if (this.state.authFormRegister.email !== "" && this.state.authFormRegister.password !== "") {
-      const { passwordConfirmation, ...data } = this.state.authFormRegister;
-      const currentUser = await registerUser(data);
-        this.setState({ currentUser})
-    }
+    const data = this.state.authFormRegister;
+    const currentUser = await registerUser(data);
+    this.setState({ currentUser })
+    this.props.history.push('/');
   };
 
-  confirmPassword = () => {
-    return this.state.authFormRegister.password === this.state.authFormRegister.passwordConfirmation
+  handleLogout = (e) => {
+    e.preventDefault();
+    localStorage.removeItem("jwt");
+    localStorage.removeItem("authToken");
+    this.setState({
+      currentUser: null
+    })
+    this.props.history.push('/Login')
   };
 
   /////////////////////////
@@ -95,9 +98,13 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.state.currentUser)
     return (
       <div className="App">
-        <Header />
+        <Header
+          currentUser={this.state.currentUser}
+          handleLogout={(e) => this.handleLogout(e)}
+        />
         <Switch>
           <Route exact path='/' render={(props) => (
             <>
@@ -121,7 +128,10 @@ class App extends React.Component {
 
           <Route path='/Profile' render={(props) => (
             <>
-              <Profile />
+              <Profile
+                returningUser={this.props.authFormLogin}
+                newUser={this.props.authFormRegister}
+              />
             </>
           )} />
 
@@ -141,4 +151,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);

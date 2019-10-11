@@ -48,3 +48,15 @@
   display: block;
 }
 
+@media (max-width: 750px) {
+
+  .details {
+    margin: 0;
+  }
+
+  .profile-container {
+    margin: 0;
+    margin-left: 0;
+    padding: 30px 30px 150px 50px;
+  }
+}

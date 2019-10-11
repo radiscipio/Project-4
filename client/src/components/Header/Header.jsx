@@ -1,14 +1,18 @@
 import React from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
+import { stack as Menu } from 'react-burger-menu'
+
 
 class Header extends React.Component {
 
   render() {
 
     return (
+
       <div className='header-container'>
         <Link className='logo-link' to="/"><h1>Barry's</h1></Link>
+        <h1 className='mobile-logo'>B</h1>
         <div className='links-container'>
           <div className='nav-bar'><Link className='links' to="/">Home</Link></div>
           <div className='nav-bar'><Link className='links' to="/Products">Products</Link></div>
@@ -23,7 +27,7 @@ class Header extends React.Component {
                 <div className='nav-bar'><Link className='links' to="/Login">Login</Link></div>
               )
           }
-          <i className="fas fa-shopping-cart fa-lg"></i>
+          <i className="fas fa-shopping-cart fa-lg nav-bar"></i>
         </div>
       </div>
     )

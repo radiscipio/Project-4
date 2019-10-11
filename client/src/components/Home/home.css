@@ -72,13 +72,15 @@ img.main-icons {
 @media (max-width: 750px) {
   .home-body {
     padding-top: 55px;
+    display: flex;
+    flex-direction: column;
   }
   .home-container {
     background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570456117/qsk2n8ry747mocxtw4ap.jpg') cover;
     background-size: contain;
     height: 200px;
   }
-  
+
   .home-tagline {
     font-size: 22px;
     display: flex;
@@ -91,8 +93,9 @@ img.main-icons {
 
   .main-body {
     margin-top: -50px;
+    margin: 0 auto;
+    margin-bottom: 40px;
     width: 70%;
-
   }
 
   .main-container {

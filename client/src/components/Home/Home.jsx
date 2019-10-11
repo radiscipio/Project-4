@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div>
+    <div className='home-body'>
       <div className='home-container'>
         <div className='home-tagline'>The perfect razor, for the perfect you</div>
       </div>

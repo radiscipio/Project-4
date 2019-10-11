@@ -70,16 +70,26 @@ img.main-icons {
 }
 
 @media (max-width: 750px) {
-
+  .home-body {
+    padding-top: 55px;
+  }
   .home-container {
-    background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570456117/qsk2n8ry747mocxtw4ap.jpg');
+    background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570456117/qsk2n8ry747mocxtw4ap.jpg') cover;
     display: flex;
-    /* flex-direction: column; */
-    background-repeat: no-repeat;
     background-size: contain;
+    height: 200px;
   }
   .home-tagline {
+    font-size: 22px;
     display: flex;
     justify-items: center;
+    padding: 40px;
+    margin: 0 auto;
+    height: 50%;
+    align-items:center;
+  }
+
+  .main-container {
+    
   }
 }

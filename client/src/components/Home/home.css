@@ -75,10 +75,10 @@ img.main-icons {
   }
   .home-container {
     background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570456117/qsk2n8ry747mocxtw4ap.jpg') cover;
-    display: flex;
     background-size: contain;
     height: 200px;
   }
+  
   .home-tagline {
     font-size: 22px;
     display: flex;

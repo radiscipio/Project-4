@@ -53,6 +53,15 @@
 }
 
 @media (max-width: 750px) {
+
+  .product-banner {
+    background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570559292/khzgmrragr8cw26bhy0l.jpg');
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    padding-top: 40px;
+  }
+
   .products-container {
     display: flex;
     flex-direction: column;

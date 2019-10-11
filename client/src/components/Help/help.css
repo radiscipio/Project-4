@@ -35,3 +35,19 @@
   width: 90%;
 }
 
+@media (max-width: 750px) {
+  .help-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .problem {
+    font-size: 24px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .apology {
+    font-size: 20px;
+  }
+}

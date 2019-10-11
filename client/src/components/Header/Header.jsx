@@ -1,8 +1,6 @@
 import React from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
-import { stack as Menu } from 'react-burger-menu'
-
 
 class Header extends React.Component {
 

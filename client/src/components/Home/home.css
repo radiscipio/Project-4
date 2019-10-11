@@ -68,3 +68,18 @@ img.main-icons {
   flex: 1;
   padding: 0px 15px;
 }
+
+@media (max-width: 750px) {
+
+  .home-container {
+    background-image: url('https://res.cloudinary.com/radiscipio/image/upload/v1570456117/qsk2n8ry747mocxtw4ap.jpg');
+    display: flex;
+    /* flex-direction: column; */
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .home-tagline {
+    display: flex;
+    justify-items: center;
+  }
+}

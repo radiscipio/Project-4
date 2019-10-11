@@ -1,6 +1,5 @@
 import React from 'react'
 import './profile.css'
-import { Link } from 'react-router-dom'
 
 function Profile(props) {
   console.log('this is props', props)

@@ -89,7 +89,27 @@ img.main-icons {
     align-items:center;
   }
 
+  .main-body {
+    margin-top: -50px;
+    width: 70%;
+
+  }
+
   .main-container {
-    
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .about-box {
+    margin: 10px;
+  }
+
+  .about-box:nth-of-type(2) {
+    order: -1;
+  }
+
+  .testimonial {
+    margin-bottom: 15px;
   }
 }

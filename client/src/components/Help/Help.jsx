@@ -12,7 +12,7 @@ function Help() {
         <div className="dog-container">
           <div className="apology">Sorry you had some trouble. Here's a photo of two really awesome dogs to make you feel better!</div>
           <div>
-            <img className="dog-pic" src={("https://res.cloudinary.com/radiscipio/image/upload/v1570484903/evxm2017blfmc05fepel.jpg")} alt="img"/>
+            <img className="dog-pic" src={("https://res.cloudinary.com/radiscipio/image/upload/v1574650536/swhy7qol3hz1cit335sa.jpg")} alt="img"/>
           </div>
         </div>
       </div>

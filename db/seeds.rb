@@ -73,14 +73,14 @@ Product.create!([
     product_type: "shower_product", 
     price: 7, 
     description: "What do coconut, shea butter, and aloe vera have in common? Our formula. It helps prevent dandruff and dry scalps, all while making you smell like you just walked out of a tropical fantasy.", 
-    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1570556429/hubspp0wryexvgp7nzhr.jpg"
+    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1586116143/bh8ljglzfvpgxkgm9wsh.jpg"
   },
   {
     name: "Conditioner", 
     product_type: "shower_product", 
     price: 7, 
     description: "Batman and Robin, Han and Chewy, Superman and... scratch that last one. What we mean is, this is the perfect match for our shampoo.", 
-    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1570556430/vn5wzujq5tfrnur84tzn.jpg"
+    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1586116123/w6p9hfg3l6oemur3wvnk.jpg"
   },
   {
     name: "Body Wash", 

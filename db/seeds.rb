@@ -80,7 +80,7 @@ Product.create!([
     product_type: "shower_product", 
     price: 7, 
     description: "Batman and Robin, Han and Chewy, Superman and... scratch that last one. What we mean is, this is the perfect match for our shampoo.", 
-    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1586116123/w6p9hfg3l6oemur3wvnk.jpg"
+    photo_url:"https://res.cloudinary.com/radiscipio/image/upload/v1592422336/tejcj96juxnuzr3nc6xi.jpg"
   },
   {
     name: "Body Wash", 
